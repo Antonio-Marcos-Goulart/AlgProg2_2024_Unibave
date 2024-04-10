@@ -4,12 +4,12 @@ import java.text.DecimalFormat;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Exercicio01_TurmaAlunos {
+public class Exercicio01_MediaDeNotasAlunos {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        DecimalFormat df = new DecimalFormat("##.00"); // formato decimal da nota
+        DecimalFormat df = new DecimalFormat("##.00"); // formato decimal da nota, com 2 casas após a virgula
         Random rand = new Random();
 
         System.out.print("Digite a quantidade de Alunos: ");
@@ -19,9 +19,9 @@ public class Exercicio01_TurmaAlunos {
 
         double[][] notas = new double[alunos][quntNotas];
 
-        for (int i = 0; i < alunos; i++){
+        for (int i = 0; i < alunos; i++){ // ex: aluno1 para nota XYZ gerada no rand
             for(int j = 0; j < quntNotas; j++){
-                double nota = rand.nextDouble(10.00) + 0.00; // nota min 0.00 e maxima 10.00
+                double nota = rand.nextDouble(10.00) + 0.00; // rand para gerar uma nota aleatória entre 0.00 - 10.00
                 notas[i][j] = nota;
             }
         }
@@ -32,7 +32,7 @@ public class Exercicio01_TurmaAlunos {
                 soma += notas[i][j];
             }
             double mediaNotas = soma / quntNotas;
-            System.out.println("\nAluno " + (i + 1) + ". Nota média: " + df.format(mediaNotas));
+            System.out.println("\nAluno " + (i + 1) + ". Média do aluno: " + df.format(mediaNotas));
         }
         sc.close();
     }

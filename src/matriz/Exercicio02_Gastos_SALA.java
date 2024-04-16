@@ -2,7 +2,7 @@ package matriz;
 
 import java.util.Random;
 
-public class GastosExercicioSala01 {
+public class Exercicio02_Gastos_SALA {
     public static void main(String[] args) {
 
         double[][] gastos = new double[12][4]; //meses, semanas

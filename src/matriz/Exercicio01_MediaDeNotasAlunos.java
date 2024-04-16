@@ -1,43 +1,48 @@
 package matriz;
 
+import javax.swing.*;
 import java.text.DecimalFormat;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Exercicio01_MediaDeNotasAlunos {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-
-        DecimalFormat df = new DecimalFormat("##.00"); // formato decimal da nota, com 2 casas após a virgula
+        DecimalFormat df = new DecimalFormat("#.##");
         Random rand = new Random();
 
-        System.out.print("Digite a quantidade de Alunos: ");
-        int alunos = sc.nextInt();
-        System.out.print("Digite a quantidade de notas: ");
-        int quntNotas = sc.nextInt();
+        String alunosInput = JOptionPane.showInputDialog(null, "Digite a quantidade de Alunos:");
+        int alunosCount = Integer.parseInt(alunosInput);
 
-        double[][] notas = new double[alunos][quntNotas];
+        String[] nomesAlunos = new String[alunosCount];
 
-        for (int i = 0; i < alunos; i++){ // ex: aluno1 para nota XYZ gerada no rand
-            for(int j = 0; j < quntNotas; j++){
-                double nota = rand.nextDouble(10.00) + 0.00; // rand para gerar uma nota aleatória entre 0.00 - 10.00
+        for (int i = 0; i < alunosCount; i++) {
+            nomesAlunos[i] = JOptionPane.showInputDialog(null, "Digite o nome do aluno " + (i + 1) + ":");
+        }
+
+        String quntNotasInput = JOptionPane.showInputDialog(null, "Digite a quantidade de notas:");
+        int quntNotas = Integer.parseInt(quntNotasInput);
+
+        double[][] notas = new double[alunosCount][quntNotas];
+
+        for (int i = 0; i < alunosCount; i++) {
+            for(int j = 0; j < quntNotas; j++) {
+                double nota = rand.nextDouble() * 10.00; // rand para gerar uma nota aleatória entre 0.00 - 10.00
                 notas[i][j] = nota;
             }
         }
 
-        for(int i = 0; i < alunos; i++ ){
+        StringBuilder mensagem = new StringBuilder();
+        for(int i = 0; i < alunosCount; i++) {
             double soma = 0;
-            for (int j = 0; j < quntNotas; j++){
+            for (int j = 0; j < quntNotas; j++) {
                 soma += notas[i][j];
             }
             double mediaNotas = soma / quntNotas;
-            System.out.println("\nAluno " + (i + 1) + ". Média do aluno: " + df.format(mediaNotas));
+            mensagem.append("\nAluno ").append(nomesAlunos[i]).append(". Média do aluno: ").append(df.format(mediaNotas));
         }
-        sc.close();
+        JOptionPane.showMessageDialog(null, mensagem.toString());
     }
 }
-
 
 
 /*

@@ -14,7 +14,7 @@ public class Exercicio06_NomeTelefone {
 		int op = 0;
 		String[] nome = new String[100];
 		int[] numero = new int[100];
-		int numDeContatos = 0; // Usapa para manter o controle do número de contatos que foram cadastrados até o momento (nome e numero). Ela é incrementada sempre que um novo contato é adicionado
+		int numDeContatos = 0; // Usada para manter o controle do número de contatos que foram cadastrados até o momento (nome e numero). Ela é incrementada sempre que um novo contato é adicionado
 
 
 		do {

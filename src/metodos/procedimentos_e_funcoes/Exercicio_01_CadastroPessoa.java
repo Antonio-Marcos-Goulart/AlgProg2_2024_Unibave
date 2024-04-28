@@ -1,8 +1,9 @@
 package metodos.procedimentos_e_funcoes;
 
 import javax.swing.*;
+import java.text.DecimalFormat;
 
-public class Exercicio_01_Pessoa {
+public class Exercicio_01_CadastroPessoa {
     public static void main(String[] args) {
 
         int n = 100;
@@ -11,20 +12,26 @@ public class Exercicio_01_Pessoa {
         char[] sexo = new char[n];
         int count = 0;
 
-        int op = 0;
+        int op;
         do {
             op = menu();
             if (op == 1) cadastrarPessoa(nome, idade, sexo, count++);
             if (op == 2) buscarPorNome(nome, idade, sexo, count++);
             if (op == 3) mediaIdadeSexoMasculino(idade, sexo, count++);
-            if (op == 4) mediaIdadesSexoFeminino(nome, idade, sexo, count++);
-            if (op == 5) quantidadeDeMulheresComMenos18(nome, idade, sexo, count++);
+            if (op == 4) mediaIdadesSexoFeminino(idade, sexo, count++);
+            if (op == 5) quantidadeDeMulheresComMenos18(sexo, count++);
         } while (op != 6);
     }
 
 
     private static int menu() {
-        String m = "1 - Cadastrar pessoa\n" + "2 - Buscar por nome\n" + "3 - Média idade homens\n" + "4 - Média idade mulheres\n" + "5 - Quantidade de mulheres com menos de 18 anos\n\n" + "6 - SAIR";
+        String m = "1 - Cadastrar pessoa\n"
+                   +"2 - Buscar por nome\n"
+                   +"3 - Média idade homens\n"
+                   +"4 - Média idade mulheres\n"
+                   +"5 - Quantidade de mulheres com menos de 18 anos\n\n"
+
+                   +"6 - SAIR";
         return Integer.parseInt(JOptionPane.showInputDialog(m));
     }
 
@@ -76,13 +83,14 @@ public class Exercicio_01_Pessoa {
         }
         if (homens > 0){
             double mediaMasc = (double) SomaIdadesMasc/homens;
-            JOptionPane.showMessageDialog(null, "Média de idade dos homens é de:\n" + mediaMasc +" anos");
-        }else {
-            JOptionPane.showMessageDialog(null, "Sem registros de idade para homens\n" + "Não foi possível calcular a média.");
-        }
+            DecimalFormat df = new DecimalFormat("0.00"); // Formato para duas casas decimais
+            String mediaComValorFormatado = df.format(mediaMasc);
+            JOptionPane.showMessageDialog(null, "Média de idade dos homens é de:\n" + mediaComValorFormatado + " anos");
+        } else {
+            JOptionPane.showMessageDialog(null, "Sem registros de idade para homens\n" + "Não foi possível calcular a média.");}
     }
 
-    private static void mediaIdadesSexoFeminino(String[] nome, int[] idade, char[] sexo, int count) {
+    private static void mediaIdadesSexoFeminino(int[] idade, char[] sexo, int count) {
 
         int SomaIdadesFem = 0;
         int mulheres = 0;
@@ -95,13 +103,14 @@ public class Exercicio_01_Pessoa {
         }
         if (mulheres > 0){
             double mediaFem = (double) SomaIdadesFem/mulheres;
-            JOptionPane.showMessageDialog(null, "Média de idade das mulheres é de:\n" + mediaFem +" anos");
-        }else {
-            JOptionPane.showMessageDialog(null, "Sem registros de idade para mulheres\n" + "Não foi possível calcular a média.");
-        }
+            DecimalFormat df = new DecimalFormat("0.00"); // Formato para duas casas decimais
+            String mediaComValorFormatado = df.format(mediaFem);
+            JOptionPane.showMessageDialog(null, "Média de idade das mulheres é de:\n" + mediaComValorFormatado + " anos");
+        } else {
+            JOptionPane.showMessageDialog(null, "Sem registros de idade para mulheres\n" + "Não foi possível calcular a média.");}
     }
 
-    private static void quantidadeDeMulheresComMenos18(String[] nome, int[] idade, char[] sexo, int count) {
+    private static void quantidadeDeMulheresComMenos18(char[] sexo, int count) {
 
         int mulheresMenos18 = 0;
 

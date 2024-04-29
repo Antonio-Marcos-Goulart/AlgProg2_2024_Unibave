@@ -86,7 +86,8 @@ public class Exercicio_01_CadastroPessoa {
             String mediaComValorFormatado = df.format(mediaMasc);
             JOptionPane.showMessageDialog(null, "Média de idade dos homens é de:\n" + mediaComValorFormatado + " anos");
         } else {
-            JOptionPane.showMessageDialog(null, "Sem registros de idade para homens\n" + "Não foi possível calcular a média.");}
+            JOptionPane.showMessageDialog(null, "Sem registros de idade para homens\n" + "Não foi possível calcular a média.");
+        }
     }
 
     private static void mediaIdadesSexoFeminino(int[] idade, char[] sexo, int count) {
@@ -106,7 +107,8 @@ public class Exercicio_01_CadastroPessoa {
             String mediaComValorFormatado = df.format(mediaFem);
             JOptionPane.showMessageDialog(null, "Média de idade das mulheres é de:\n" + mediaComValorFormatado + " anos");
         } else {
-            JOptionPane.showMessageDialog(null, "Sem registros de idade para mulheres\n" + "Não foi possível calcular a média.");}
+            JOptionPane.showMessageDialog(null, "Sem registros de idade para mulheres\n" + "Não foi possível calcular a média.");
+        }
     }
 
     private static void quantidadeDeMulheresComMenos18(char[] sexo, int count) {

@@ -1,4 +1,4 @@
-package Exercicios_Correcoes_EmSala;
+package exercicios_Correcoes_EmSala;
 
 import java.util.Scanner;
 

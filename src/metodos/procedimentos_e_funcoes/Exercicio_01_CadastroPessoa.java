@@ -41,7 +41,6 @@ public class Exercicio_01_CadastroPessoa {
             idade[count] = Integer.parseInt(JOptionPane.showInputDialog("Idade: "));
             String inputSexo = JOptionPane.showInputDialog("Sexo (M/F): "); //Converte para maiúscula para garantir 'M' ou 'F'
             sexo[count] = inputSexo.toUpperCase().charAt(0);
-
             if (sexo[count] != 'M' && sexo[count] != 'F') {
                 JOptionPane.showMessageDialog(null, "Entrada inválida para sexo. Por favor, insira 'M' ou 'F'.");
                 return;

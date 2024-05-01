@@ -132,7 +132,6 @@ public class Exercicio_01_CadastroPessoa {
 4 - Média das idades das mulheres
 5 - Quantidade de mulheres com menos de 18 anos
 6 - Sair
-
 Deve ser utilizado sub-rotinas.
  */
 

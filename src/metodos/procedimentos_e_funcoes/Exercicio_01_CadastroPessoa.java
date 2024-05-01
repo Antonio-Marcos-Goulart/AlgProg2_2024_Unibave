@@ -17,8 +17,8 @@ public class Exercicio_01_CadastroPessoa {
             op = menu();
             if (op == 1) cadastrarPessoa(nome, idade, sexo, count++);
             if (op == 2) buscarPorNome(nome, idade, sexo, count++);
-            if (op == 3) mediaIdadeSexoMasculino(idade, sexo, count++);
-            if (op == 4) mediaIdadesSexoFeminino(idade, sexo, count++);
+            if (op == 3) mediaIdadeSexoMasculino(idade, sexo, count++); // NÃO É UMA BOA PRATICA, USEI O MESMO CÓDIGO PARA 2 FUNÇÕES >> if(op == 3) mediaIdades(idades, sexos, count, "M");
+            if (op == 4) mediaIdadesSexoFeminino(idade, sexo, count++); // NÃO É UMA BOA PRATICA, USEI O MESMO CÓDIGO PARA 2 FUNÇÕES >> if(op == 4) mediaIdades(idades, sexos, count, "F");
             if (op == 5) quantidadeDeMulheresComMenos18(sexo, count++);
         } while (op != 6);
     }

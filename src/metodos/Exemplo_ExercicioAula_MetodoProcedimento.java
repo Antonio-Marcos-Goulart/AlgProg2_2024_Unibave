@@ -24,3 +24,5 @@ public class Exemplo_ExercicioAula_MetodoProcedimento {
         System.out.printf("MULTIPLICAR DOIS NUMEROS %.2f ", multiplica);
     }
 }
+
+// EXEMPLO USADO PELO PROFESSOR PARA DEMONSTRAR O FUNCIONAMENTO

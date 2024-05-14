@@ -1,4 +1,4 @@
-package avaliacao__02_04_2024;
+package avaliacao_Vetor_02_04_2024;
 
 import javax.swing.*;
 public class Questao_03_operacoesMatematicas {

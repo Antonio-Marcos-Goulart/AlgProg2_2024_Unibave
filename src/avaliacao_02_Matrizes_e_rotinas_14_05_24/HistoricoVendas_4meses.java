@@ -164,7 +164,7 @@ public class HistoricoVendas_4meses {
         } while (mes < 1 || mes > 4);
 
         StringBuilder msg = new StringBuilder();
-        msg.append("Total de vendas no mês ").append(mes).append(":\n\n");
+        msg.append("Total de vendas no mês: ").append(mes).append(":\n\n");
 
         double totalGeral = 0.0;
         boolean vendasNoMes = false;

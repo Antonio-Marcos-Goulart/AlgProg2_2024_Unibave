@@ -10,7 +10,7 @@ public class HistoricoVendas_4meses {
         String[] nomeProduto = new String[n];
         int[] quantidade = new int[n];
         double[] precoProduto = new double[n];
-        int[][] vendasProdutos = new int[n][4];
+        int[][] vendasProdutos = new int[n][4]; // meses de vendas
         int count = 0;
 
         int op;
@@ -92,12 +92,12 @@ public class HistoricoVendas_4meses {
 
 // VENDAS VL ALEATÓRIO ===================
 
-            Random ranPreco = new Random();
-            int[] vendas = new int[4];
+            Random quantVendasMes = new Random();
+            int[] mesDeVendas = new int[4]; // MESES DE VENDAS
             for (int i = 0; i < 4; i++) {
-                vendas[i] = ranPreco.nextInt(501);
+                mesDeVendas[i] = quantVendasMes.nextInt(501); // QUANTIDADE MAXIMA DE VENDAS QUE PODEM SER GERADAS PELO 'Random'
             }
-            vendasProdutos[count] = vendas;
+            vendasProdutos[count] = mesDeVendas;
             JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso!");
         } else {
             JOptionPane.showMessageDialog(null, "ERRO: Limite de produtos cadastrados .");

@@ -2,7 +2,7 @@ package exercicios_E_Correcoes_EmSala;
 
 import javax.swing.JOptionPane;
 
-public class Exercicio02_Vetor_Correcao {
+public class Exercicio03_Vetor_Correcao {
 public static void main(String[] args) {
 		
 		int n = Integer.parseInt(JOptionPane.showInputDialog("Quantidade de pessoas a serem cadastradas"));

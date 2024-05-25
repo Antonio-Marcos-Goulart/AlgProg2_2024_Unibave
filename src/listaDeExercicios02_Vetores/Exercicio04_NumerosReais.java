@@ -37,7 +37,7 @@ public class Exercicio04_NumerosReais {
 		   }
 	   }
 	   
-	   StringBuilder m = new StringBuilder("Resultado");
+	   StringBuilder m = new StringBuilder("Resultado\n");
 	   for (int i = 0; i < numeros.length; i++) {
            m.append("Número #").append(i + 1).append(": ").append(numeros[i]).append("\n");
        }

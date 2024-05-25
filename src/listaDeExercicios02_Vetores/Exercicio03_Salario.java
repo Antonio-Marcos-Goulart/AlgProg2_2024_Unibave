@@ -15,16 +15,16 @@ public class Exercicio03_Salario {
 			 salario[i] = Double.parseDouble(JOptionPane.showInputDialog("Digite o salário do funcionário(a) " + nome[i] + ": "));
 		 }
 		 for(int i = 0; i < n; i++) {
-			 if (salario[i] <= 400) {
+			 if (salario[i] <= 400) { // salario menor ou igual a 400 > ganha 25% de ajuste
 				salario[i]*= 1.25;
 			}
-			 else if (salario[i] <= 600) {
+			 else if (salario[i] <= 600) { // salario menor ou igual a 600 > ganha 20% de ajuste
 				salario[i] *= 1.20;
 			}
-			 else if (salario[i] <= 800) {
+			 else if (salario[i] <= 800) { // salario menor ou igual a 800 > ganha 20% de ajuste
 				 salario[i] *= 1.15;
 			 } else {
-				 salario[i] *= 1.10;
+				 salario[i] *= 1.10;// salario maior que 800 > ganha 10% de ajuste
 			 }
 		 } 
 		 StringBuilder salarioFuncio = new StringBuilder("Salaríos dos funcionarios alterados após o ajuste: \n ");

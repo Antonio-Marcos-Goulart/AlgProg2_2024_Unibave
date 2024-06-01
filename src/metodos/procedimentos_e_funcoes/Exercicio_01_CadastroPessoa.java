@@ -20,7 +20,7 @@ public class Exercicio_01_CadastroPessoa {
             if (op == 3) mediaIdadeSexoMasculino(idade, sexo, count++); // NÃO É UMA BOA PRATICA, USEI O MESMO CÓDIGO PARA 2 FUNÇÕES >> if(op == 3) mediaIdades(idades, sexos, count, "M");
             if (op == 4) mediaIdadesSexoFeminino(idade, sexo, count++); // NÃO É UMA BOA PRATICA, USEI O MESMO CÓDIGO PARA 2 FUNÇÕES >> if(op == 4) mediaIdades(idades, sexos, count, "F");
             if (op == 5) quantidadeDeMulheresComMenos18(sexo, count++);
-        } while (op != 6);
+        } while (op != 6);;
     }
 
 
@@ -76,7 +76,7 @@ public class Exercicio_01_CadastroPessoa {
 
         for (int i = 0; i < count; i++){
             if (sexo[i] == 'M' || sexo[i] == 'm'){
-                SomaIdadesMasc += idade[i];
+                SomaIdadesMasc += idade[i]; // ARMAZENA INF.
                 homens++;
             }
         }
@@ -97,7 +97,7 @@ public class Exercicio_01_CadastroPessoa {
 
         for (int i = 0; i < count; i++){
             if (sexo[i] == 'F' || sexo[i] == 'f'){
-                SomaIdadesFem += idade[i];
+                SomaIdadesFem += idade[i]; // ARMAZENA A INF
                 mulheres++;
             }
         }

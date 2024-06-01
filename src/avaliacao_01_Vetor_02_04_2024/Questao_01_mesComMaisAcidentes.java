@@ -28,7 +28,7 @@ public class Questao_01_mesComMaisAcidentes {
         var percFevereiro = (double) fevereiro / acidentesNoAno * 100;
 
         String msgSaida = "Mês com mais acidentes: " + meses[indiceMesMaisAcidentes] + "\n"
-                + "Mês com menos acidentes: " + meses[indiceMesMenosAcidentes] + "\n"
+                + "Mês com menos acidentes: " + meses[indiceMesMenosAcidentes] + "\n "
                 + "Total de acidentes no ano: " + acidentesNoAno + "\n"
                 + "Percentual de acidentes no mês de fevereiro: " + percFevereiro + "%";
         JOptionPane.showMessageDialog(null, msgSaida);

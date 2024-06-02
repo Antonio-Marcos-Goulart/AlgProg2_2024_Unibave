@@ -1,6 +1,6 @@
 package metodos.procedimentos_e_funcoes;
 
-import metododos_e_procedimentos.procedimentos_e_funcoes.jogador.JogadorFut;
+import metodos.procedimentos_e_funcoes.jogador.JogadorFut;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -21,7 +21,6 @@ public class JogadorFutebol {
         } while (op != 6);
 
     }
-
 
     private static int menu() {
         String m = "1 - Cadastrar jogador\n"

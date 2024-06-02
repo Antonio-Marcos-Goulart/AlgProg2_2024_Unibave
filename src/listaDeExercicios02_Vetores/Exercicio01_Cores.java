@@ -6,7 +6,7 @@ public class Exercicio01_Cores {
 
 	public static void main(String[] args) {
 		
-		String[] cores = new String[5];
+		String[] cores = new String[6];
 
 		for(int i = 0; i < cores.length; i++) {
 			cores [i] = JOptionPane.showInputDialog("Informe a " + (i + 1) + "° cor: ");

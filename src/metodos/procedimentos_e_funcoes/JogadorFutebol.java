@@ -1,11 +1,11 @@
 package metodos.procedimentos_e_funcoes;
 
-import metodos.procedimentos_e_funcoes.jogador.JogadorFut;
+import metododos_e_procedimentos.procedimentos_e_funcoes.jogador.JogadorFut;
 
 import javax.swing.*;
 import java.util.ArrayList;
 
-public class TimeDeFutebol {
+public class JogadorFutebol {
     public static void main(String[] args) {
 
         ArrayList<JogadorFut> jogador = new ArrayList<JogadorFut>();

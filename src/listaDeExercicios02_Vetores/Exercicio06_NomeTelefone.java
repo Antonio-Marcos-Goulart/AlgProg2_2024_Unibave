@@ -8,6 +8,7 @@ public class Exercicio06_NomeTelefone {
 		String menu = "1 - Cadastrar contato\n" 
 				+ "2 - Buscar contato por nome\n" 
 				+ "3 - Buscar contato por telefone\n"
+
 				+ "4 - Sair";
 
 		int n;

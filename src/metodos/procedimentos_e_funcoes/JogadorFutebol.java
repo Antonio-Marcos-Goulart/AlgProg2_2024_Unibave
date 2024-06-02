@@ -1,6 +1,7 @@
 package metodos.procedimentos_e_funcoes;
 
-import metododos_e_procedimentos.procedimentos_e_funcoes.jogador.JogadorFut;
+
+import metodos.procedimentos_e_funcoes.jogador.JogadorFut;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -36,8 +37,6 @@ public class JogadorFutebol {
 
     private static JogadorFut cadastroJogador() {
         JogadorFut jogador = new JogadorFut();
-
-
         return null;
     }
 

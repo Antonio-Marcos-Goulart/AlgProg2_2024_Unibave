@@ -1,26 +1,21 @@
 package metodos.procedimentos_e_funcoes.jogador;
 
 public class JogadorFut {
-
     private String nome;
-    private Integer numCamisa;
+    private int numCamisa;
     private String time;
     private String posicao;
-    private Integer qntGols;
-
-    public String getNome() {
-        return nome;
-    }
+    private int qntGols;
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public Integer getNumCamisa() {
+    public int getNumCamisa() {
         return numCamisa;
     }
 
-    public void setNumCamisa(Integer numCamisa) {
+    public void setNumCamisa(int numCamisa) {
         this.numCamisa = numCamisa;
     }
 
@@ -40,13 +35,20 @@ public class JogadorFut {
         this.posicao = posicao;
     }
 
-    public Integer getQntGols() {
+    public int getQntGols() {
         return qntGols;
     }
 
-    public void setQntGols(Integer qntGols) {
+    public void setQntGols(int qntGols) {
         this.qntGols = qntGols;
     }
-}
 
-//
+    @Override
+    public String toString() {
+        return "Nome: " + nome
+                + "\nNúmero da Camisa: " + numCamisa
+                + "\nTime: " + time
+                + "\nPosição: " + posicao
+                + "\nQuantidade de Gols: " + qntGols;
+    }
+}

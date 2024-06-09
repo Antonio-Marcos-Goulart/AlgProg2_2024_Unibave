@@ -25,17 +25,41 @@ public class CadLivros {
     }
 
     private static int menu() {
-        String m = "1 - Cadastrar jogador\n"
-                +"2 - Jogador com maior numero de Gols\n"
-                +"3 - Jogador com menor numero de Gols\n"
-                +"4 - Goleiros que dizeram gol\n"
-                +"5 - Camisas 10 \n\n"
+        String m = "1 - Cadastrar livro\n"
+                +"2 - Localizar livro pelo ISBN\nMostrar pessoas que ja pegaram o livro emprestado\n"
+                +"3 - Buscar por libros pegos por um usuário\n"
+                +"4 - Dados de todos os livros publicados em 2020\n"
+                +"5 - Lista de livros de um determinado gênero \n\n"
                 +"6 - SAIR";
         return Integer.parseInt(JOptionPane.showInputDialog(m));
     }
 
     private static Livros cadastroLivro() {
         Livros livro = new Livros();
+
+// TITULO DO LIVRO
+
+        String titulo;
+        do {
+            titulo = JOptionPane.showInputDialog("Digite o titulo do livro:");
+            if (titulo == null || titulo.trim().isEmpty()){
+                JOptionPane.showInputDialog("Digite o titulo do livro:");
+            }
+        }while (titulo == null || titulo.trim().isEmpty());
+        livro.setTituo(titulo);
+
+// AUTOR
+
+        String autor;
+        do {
+            autor = JOptionPane.showInputDialog("Digite o nome do autor:");
+            if (autor == null || autor.trim().isEmpty()){
+                JOptionPane.showInputDialog("Digite o nome do autor:");
+            }
+        }while (autor == null || titulo.trim().isEmpty());
+        livro.setAutor(autor);
+
+
 
         return null;
     }

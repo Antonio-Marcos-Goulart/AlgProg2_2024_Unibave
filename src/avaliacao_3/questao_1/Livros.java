@@ -1,26 +1,27 @@
 package avaliacao_3.questao_1;
 
 public class Livros {
-    private String tituo;
-    private String autor;
-    private Integer anoDePublicacao;
-    private Integer numeroDeLivroPadraoInternacional_ISBN;
-    private String[] pessoasQuePegaramLivroEmprestado;
+    String titulo;
+    String genero;
+    String autor;
+    int anoDePublicacao;
+    long numeroDeLivroPadraoInternacional_ISBN; // USANDO LONG POIS COM INT NÃO FUNIONA CORRETAMENTE
+    String[] pessoasQuePegaramLivroEmprestado;
 
-    public Livros() {
-        this.autor = autor;
-        this.tituo = tituo;
-        this.anoDePublicacao = anoDePublicacao;
-        this.numeroDeLivroPadraoInternacional_ISBN = numeroDeLivroPadraoInternacional_ISBN;
-        this.pessoasQuePegaramLivroEmprestado = pessoasQuePegaramLivroEmprestado;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public String getTituo() {
-        return tituo;
+    public void setTitulo(String tiluo) {
+        this.titulo = tiluo;
     }
 
-    public void setTituo(String tituo) {
-        this.tituo = tituo;
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
     public String getAutor() {
@@ -39,11 +40,11 @@ public class Livros {
         this.anoDePublicacao = anoDePublicacao;
     }
 
-    public Integer getNumeroDeLivroPadraoInternacional_ISBN() {
+    public long getNumeroDeLivroPadraoInternacional_ISBN() {
         return numeroDeLivroPadraoInternacional_ISBN;
     }
 
-    public void setNumeroDeLivroPadraoInternacional_ISBN(Integer numeroDeLivroPadraoInternacional_ISBN) {
+    public void setNumeroDeLivroPadraoInternacional_ISBN(long numeroDeLivroPadraoInternacional_ISBN) {
         this.numeroDeLivroPadraoInternacional_ISBN = numeroDeLivroPadraoInternacional_ISBN;
     }
 
@@ -54,4 +55,12 @@ public class Livros {
     public void setPessoasQuePegaramLivroEmprestado(String[] pessoasQuePegaramLivroEmprestado) {
         this.pessoasQuePegaramLivroEmprestado = pessoasQuePegaramLivroEmprestado;
     }
+
+
+    public String toString2020() {
+        return "Titulo do Livro: " + titulo + "\n" +
+                "Autor: " + autor + "\n";
+    }
+
+
 }

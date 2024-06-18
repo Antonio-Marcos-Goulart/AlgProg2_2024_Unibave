@@ -8,5 +8,5 @@ public class Livros {
     String autores;
     int anoDePublicacao;
     long ISBNs;
-    ArrayList<String> nomeEmprestimos = new ArrayList<>();
+    ArrayList<String> emprestimo = new ArrayList<>();
 }
